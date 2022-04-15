@@ -65,7 +65,7 @@ class SeedMake extends MigrateMakeCommand
 
         $file = pathinfo($migration, PATHINFO_FILENAME);
 
-        $this->line('<info>Created Seeder for '.ucfirst($env).' environment:</info>'." {$file}");
+        $this->line('<info>Created Seeder for ' . ucfirst($env) . ' environment:</info>' . " {$file}");
 
         return $file;
     }
@@ -93,9 +93,9 @@ class SeedMake extends MigrateMakeCommand
 
         $path = (empty($targetPath))
             ? database_path(config('seeders.dir'))
-            : $this->laravel->basePath().DIRECTORY_SEPARATOR.$targetPath;
+            : $this->laravel->basePath() . DIRECTORY_SEPARATOR . $targetPath;
 
-        return $path.DIRECTORY_SEPARATOR.$env;
+        return $path . DIRECTORY_SEPARATOR . $env;
     }
 
     /**

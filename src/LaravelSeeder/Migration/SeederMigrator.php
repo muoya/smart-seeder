@@ -155,7 +155,9 @@ class SeederMigrator extends Migrator implements SeederMigratorInterface
         })->all();
 
         return $this->rollbackMigrations(
-            $migrations, $paths, compact('pretend')
+            $migrations,
+            $paths,
+            compact('pretend')
         );
     }
 
@@ -184,7 +186,8 @@ class SeederMigrator extends Migrator implements SeederMigratorInterface
 
             $this->runDown(
                 $files[$migration->seed],
-                $migration, Arr::get($options, 'pretend', false)
+                $migration,
+                Arr::get($options, 'pretend', false)
             );
         }
 
