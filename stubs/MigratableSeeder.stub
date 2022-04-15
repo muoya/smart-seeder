@@ -8,7 +8,9 @@ return new class extends MigratableSeeder
     use DisableForeignKeysTrait;
 
     /**
-     * Run the database seeder.
+     * Run the seeders.
+     *
+     * @return void
      */
     public function run(): void
     {
@@ -16,10 +18,12 @@ return new class extends MigratableSeeder
     }
 
     /**
-     * Reverts the database seeder.
+     * Reverse the seeder.
+     *
+     * @return void
      */
     public function down(): void
     {
         // Remove your data
     }
-}
+};
