@@ -1,0 +1,49 @@
+{
+  "name": "muoya/smart-seeder",
+  "description": "Versioned, environment-based Seeders in Laravel.",
+  "keywords": [
+    "data",
+    "database",
+    "environment",
+    "laravel",
+    "production",
+    "seed",
+    "seeder",
+    "seeding",
+    "staging",
+    "table",
+    "version"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.4.0",
+    "illuminate/support": "^8.0|^9.0",
+    "illuminate/console": "^8.0|^9.0",
+    "illuminate/database": "^8.0|^9.0",
+    "illuminate/filesystem": "^8.0|^9.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.1",
+    "orchestra/testbench": "^3.0",
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Eighty8\\LaravelSeeder\\": "src/LaravelSeeder"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Eighty8\\LaravelSeeder\\Tests\\": "tests/LaravelSeeder"
+    }
+  },
+  "prefer-stable": true,
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Eighty8\\LaravelSeeder\\SeederServiceProvider"
+      ]
+    }
+  }
+}
