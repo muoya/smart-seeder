@@ -66,15 +66,6 @@ interface SeederMigratorInterface
     public function rollback($paths = [], array $options = []);
 
     /**
-     * Resolve a migration instance from a file.
-     *
-     * @param string $file
-     *
-     * @return MigratableSeeder
-     */
-    public function resolve($file): MigratableSeeder;
-
-    /**
      * Set the default connection name.
      *
      * @param string $name
