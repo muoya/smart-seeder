@@ -58,11 +58,9 @@ class SeederMigrationCreator extends MigrationCreator
      *
      * @return void
      */
-    protected function ensureMigrationDoesntAlreadyExist($name,  $migrationPath = NULL): void
+    protected function ensureMigrationDoesntAlreadyExist($name, $migrationPath = null): void
     {
-        if (class_exists($className = $this->getClassName($name))) {
-            throw new InvalidArgumentException("{$className} already exists.");
-        }
+        parent::ensureMigrationDoesntAlreadyExist($name, $migrationPath);
     }
 
     /**
@@ -112,7 +110,7 @@ class SeederMigrationCreator extends MigrationCreator
      */
     protected function getPath($name, $path): string
     {
-        return $path . DIRECTORY_SEPARATOR . $this->getDatePrefix() . '_' . $this->getClassName($name) . '.php';
+        return $path . DIRECTORY_SEPARATOR . $this->getDatePrefix() . '_' . $name . '.php';
     }
 
     /**
