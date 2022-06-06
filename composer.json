@@ -1,49 +1,36 @@
 {
   "name": "luizneves01/smart-seeder",
-  "description": "Versioned, environment-based Seeders in Laravel.",
-  "keywords": [
-    "data",
-    "database",
-    "environment",
-    "laravel",
-    "production",
-    "seed",
-    "seeder",
-    "seeding",
-    "staging",
-    "table",
-    "version"
-  ],
+  "description": "Smart Seeder adds the same methology to seeding that is currently used with migrations in order to let you seed in batches, seed to production databases or other environments, and to rerun seeds without wiping out your data.",
+  "keywords": ["laravel", "seed", "database", "seeding", "table", "seeder", "smart"],
+  "version": "1.0.0",
   "type": "library",
   "license": "MIT",
+  "authors": [
+    {
+      "name": "jlapp",
+      "email": "jordan@jordanlapp.com"
+    }
+  ],
   "require": {
-    "php": "^7.0",
-    "illuminate/support": "^9.0",
-    "illuminate/console": "^9.0",
-    "illuminate/database": "^9.0",
-    "illuminate/filesystem": "^9.0"
+    "php": ">=5.4.0",
+    "illuminate/support": "5.0.*",
+    "illuminate/console": "5.0.*",
+    "illuminate/database": "5.0.*",
+    "illuminate/filesystem": "5.0.*"
   },
   "require-dev": {
-    "mockery/mockery": "^1.5",
-    "orchestra/testbench": "^7.4",
-    "phpunit/phpunit": "^9.5"
+    "phpspec/phpspec": "~2.0",
+    "henrikbjorn/phpspec-code-coverage": "~0.2"
   },
   "autoload": {
-    "psr-4": {
-      "Eighty8\\LaravelSeeder\\": "src/LaravelSeeder"
+    "psr-0": {
+      "Jlapp\\SmartSeeder\\": "src/",
+      "": "src"
     }
   },
-  "autoload-dev": {
-    "psr-4": {
-      "Eighty8\\LaravelSeeder\\Tests\\": "tests/LaravelSeeder"
-    }
+  "config": {
+    "bin-dir": "bin"
   },
-  "prefer-stable": true,
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Eighty8\\LaravelSeeder\\SeederServiceProvider"
-      ]
-    }
-  }
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
