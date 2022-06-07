@@ -119,11 +119,11 @@ abstract class AbstractSeedMigratorCommand extends Command
         $pathFromConfig = database_path(config('seeders.dir'));
 
         // Add the 'all' environment path to migration paths
-        $allEnvPath = $pathFromConfig.DIRECTORY_SEPARATOR.self::ALL_ENVIRONMENTS;
+        $allEnvPath = $pathFromConfig . DIRECTORY_SEPARATOR . self::ALL_ENVIRONMENTS;
         $this->addMigrationPath($allEnvPath);
 
         // Add the targeted environment path to migration paths
-        $pathWithEnv = $pathFromConfig.DIRECTORY_SEPARATOR.$this->getEnvironment();
+        $pathWithEnv = $pathFromConfig . DIRECTORY_SEPARATOR . $this->getEnvironment();
         $this->addMigrationPath($pathWithEnv);
     }
 
