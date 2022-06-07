@@ -2,7 +2,7 @@
 
 namespace Eighty8\LaravelSeeder\Command;
 
-use App;
+use Illuminate\Support\Facades\App;
 use Illuminate\Database\Console\Migrations\MigrateMakeCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
