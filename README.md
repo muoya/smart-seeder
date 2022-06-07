@@ -18,7 +18,7 @@ Requirements
 Installation
 ============
 
-- Run ```composer require muoya/smart-seeder```
+- Run ```composer require luizneves01/smart-seeder```
 - Run ```php artisan vendor:publish``` to push config files to your config folder if you want to override the name of the seeds folder or the name of the table where seeds are stored
 
 
